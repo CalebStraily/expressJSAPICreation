@@ -17,6 +17,15 @@ class RestDao
             res.send(rows);
         })
     }
+
+    findIdOne(req, res)
+    {
+        pool.query('SELECT * from restaurants_records WHERE id = 1', (err, rows) =>
+        {
+            console.log(rows);
+            res.send(rows);
+        })
+    }
 }
 
 module.exports = RestDao;
